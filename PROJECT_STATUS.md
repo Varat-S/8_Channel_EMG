@@ -87,3 +87,4 @@ The primary pooled-model outcome is zero-shot, trial-grouped smoothed macro F1 o
 - **2026-10-22:** Deployed the selected pooled plain CNN to the hand-only page on port 8768. Confirmed the page and configuration respond; did not perform a new live hardware accuracy trial.
 - **2026-10-22:** Updated the hand-only page to display its actual model artifact and recorded baseline session. Verified the model, baseline, page, and script through the local server; the project suite passed 117 tests.
 - **2026-10-22:** Prepared the public GitHub repository with code, documentation, selected model artifacts, and result summaries. Local raw recordings, prepared participant data, prediction traces, the proprietary lab executable, and runtime files are excluded from Git.
+- **2026-10-22:** Published the reviewed project to `https://github.com/Varat-S/8_Channel_EMG` on `main`. Future study updates should update this log and be committed with the related code or results.
