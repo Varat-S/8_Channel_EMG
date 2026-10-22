@@ -1,0 +1,20 @@
+{
+  "session_id": "v2_session_A",
+  "subject_id": "S01",
+  "electrode_placement_id": "P2",
+  "electrode_reapplied": false,
+  "arm_posture": "reference",
+  "shoulder_position": null,
+  "elbow_position": null,
+  "forearm_orientation": "neutral",
+  "dynamic_arm_motion": false,
+  "gesture_set": "dataset_v2_9class",
+  "recording_date": null,
+  "notes": "P2 identifies the current arrangement; ring shifted slightly relative to the older recording. Verify this note before use. Keep this application throughout Session A.",
+  "block_conditions": {
+    "reference": {},
+    "elbow_flexed": {},
+    "elbow_extended": {},
+    "arm_abducted": {}
+  }
+}

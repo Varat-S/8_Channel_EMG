@@ -1,0 +1,12 @@
+{
+  "recording_date": null,
+  "electrode_placement_id": "placement_A",
+  "electrode_reapplied": false,
+  "arm_posture": "reference",
+  "shoulder_position": "arm_near_torso",
+  "elbow_position": "90_deg_flexion",
+  "forearm_orientation": "neutral",
+  "dynamic_arm_motion": false,
+  "calibration_session_id": null,
+  "notes": "Example only. Replace these conditions with observed values before recording; detailed positions are not claims about existing sessions."
+}

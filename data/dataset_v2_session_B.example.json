@@ -1,0 +1,12 @@
+{
+  "session_id": "v2_session_B",
+  "subject_id": "S01",
+  "electrode_placement_id": "P3",
+  "electrode_reapplied": true,
+  "arm_posture": "reference",
+  "forearm_orientation": "neutral",
+  "dynamic_arm_motion": false,
+  "gesture_set": "dataset_v2_9class",
+  "recording_date": null,
+  "notes": "Remove and reapply electrodes before Session B; P3 must be a new application ID."
+}

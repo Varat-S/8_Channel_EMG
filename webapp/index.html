@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMG Hand Mirror</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main>
+    <section id="stage" aria-label="Animated 3D hand">
+      <div class="brand"><span class="pulse"></span> URECA / EMG HAND MIRROR</div>
+      <div class="hint">Drag to rotate · Scroll to zoom</div>
+    </section>
+    <aside>
+      <div class="eyebrow">SYSTEM STATE</div>
+      <h1 id="state-title">Waiting</h1>
+      <p id="status">Start the receiver when your arm is relaxed and in the trained seated posture.</p>
+
+      <div class="readout">
+        <span>OUTPUT POSE</span><strong id="output-pose">REST</strong>
+      </div>
+      <div class="readout">
+        <span>DETECTED</span><strong id="detected-pose">—</strong>
+      </div>
+      <div class="confidence"><div id="confidence-bar"></div></div>
+      <div class="confidence-label"><span>Classifier confidence</span><span id="confidence-value">0%</span></div>
+
+      <div id="calibration-block" class="calibration-block hidden">
+        <div class="section-label">FRESH CALIBRATION</div>
+        <div class="calibration-progress"><div id="calibration-bar"></div></div>
+        <div class="confidence-label"><span id="calibration-phase">Preparing</span><span id="calibration-count">0 / 12</span></div>
+      </div>
+
+      <div class="sequence-block">
+        <div class="section-label">WAKE SEQUENCE</div>
+        <div id="sequence" class="sequence"></div>
+        <p id="sequence-help" class="small">Each pose must be held steadily.</p>
+      </div>
+
+      <div class="preview-block">
+        <div class="section-label">POSE PREVIEW</div>
+        <div id="pose-preview" class="pose-preview"></div>
+      </div>
+
+      <div class="actions">
+        <button id="calibrate">Fresh calibration</button>
+        <button id="connect" class="secondary">Test saved model</button>
+        <button id="disarm" class="secondary">Lock hand</button>
+        <button id="reset" class="secondary">Reset connection</button>
+      </div>
+      <p class="small safety">This display maps classifier labels to animation presets. It does not infer continuous finger angles from EMG.</p>
+    </aside>
+  </main>
+  <script>
+    window.addEventListener('error', event => {
+      const status = document.querySelector('#status');
+      if (status) status.textContent = `Browser error: ${event.message} (${event.filename}:${event.lineno})`;
+    });
+    window.addEventListener('unhandledrejection', event => {
+      const status = document.querySelector('#status');
+      if (status) status.textContent = `Browser error: ${event.reason}`;
+    });
+  </script>
+  <script type="module" src="./app.js?v=6" onerror="document.querySelector('#status').textContent='Browser error: the 3D module did not load.'"></script>
+</body>
+</html>

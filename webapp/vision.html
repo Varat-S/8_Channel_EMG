@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision-assisted EMG ground truth</title>
+  <link rel="stylesheet" href="vision.css?v=20261022-view-only">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">URECA · LOCAL ACQUISITION</p>
+        <h1>Vision-assisted ground truth</h1>
+        <p class="lede">The camera proposes the pose. The recorder accepts a label only while vision remains stable across the entire synchronized EMG segment.</p>
+      </div>
+      <div id="privacyBadge" class="privacy">● Camera stays local</div>
+    </header>
+
+    <section class="layout">
+      <div class="camera-card panel">
+        <div class="camera-wrap">
+          <video id="camera" autoplay muted playsinline></video>
+          <canvas id="overlay"></canvas>
+          <div id="cameraEmpty" class="camera-empty">Camera is off</div>
+          <div class="vision-readout">
+            <span id="poseLabel">NO HAND</span>
+            <span id="poseConfidence">0%</span>
+          </div>
+        </div>
+        <div class="stability-row">
+          <div><span>Visual stability</span><strong id="stableTime">0.0 s</strong></div>
+          <div><span>Motion</span><strong id="motionValue">—</strong></div>
+          <div><span>Wrist angle</span><strong id="wristValue">—</strong></div>
+          <div><span>Elbow angle</span><strong id="elbowValue">—</strong></div>
+          <div><span>Elbow posture</span><strong id="postureValue">—</strong></div>
+          <div><span>Forearm</span><strong id="forearmValue">—</strong></div>
+          <div><span>Finger separation</span><strong id="spreadValue">—</strong></div>
+        </div>
+        <div class="meter"><div id="stabilityBar"></div></div>
+        <p class="camera-note">Frame the hand, wrist and elbow; the shoulder is optional. Keep only one hand visible.</p>
+      </div>
+
+      <aside class="panel controls">
+        <div class="status-block">
+          <span id="phasePill" class="pill">IDLE</span>
+          <h2 id="statusTitle">Enable the camera</h2>
+          <p id="statusMessage">Nothing is recorded until you explicitly start an EMG session.</p>
+          <div class="capture-progress"><div id="captureBar"></div></div>
+        </div>
+
+        <div class="fields">
+          <label>Subject ID<input id="subjectId" value="S01" pattern="[A-Za-z0-9_-]+"></label>
+          <label>Electrode placement<input id="placementId" value="P3" pattern="[A-Za-z0-9_-]+"></label>
+          <label>Arm posture<input id="armPosture" value="seated_reference"></label>
+          <label>Target / pose<input id="targetReps" type="number" value="6" min="1" max="30"></label>
+        </div>
+        <p id="protocolBlock" class="source-line" hidden></p>
+
+        <div class="buttons">
+          <button id="cameraButton" class="primary">Enable camera</button>
+          <button id="visualCalibrationButton" disabled>Calibrate 7 poses × 2 postures</button>
+          <button id="sessionButton" disabled>Start EMG session</button>
+          <button id="advancePostureButton" disabled hidden>Start horizontal block</button>
+          <button id="stopButton" class="danger" disabled>Stop &amp; save</button>
+        </div>
+        <p id="sourceLine" class="source-line">Loading recorder configuration…</p>
+      </aside>
+    </section>
+
+    <section class="pose-grid" id="poseGrid"></section>
+
+    <section class="panel protocol">
+      <h2 id="protocolTitle">Automatic protocol</h2>
+      <ol id="protocolList">
+        <li><strong>Visual calibration:</strong> follow seven prompts with a vertical forearm, then the same seven with a horizontal forearm.</li>
+        <li><strong>Baseline:</strong> show a relaxed, naturally grouped hand for five seconds.</li>
+        <li><strong>Capture:</strong> hold any recognized pose. A stable label starts its synchronized EMG segment automatically.</li>
+        <li><strong>Release:</strong> return to neutral, then repeat in any order. Automatic capture for a pose stops at its displayed target.</li>
+      </ol>
+      <p class="warning"><strong>Important:</strong> vision labels posture, not muscle relaxation. Review the saved data before using it as scientific ground truth.</p>
+    </section>
+  </main>
+  <script type="module" src="vision.js?v=20261022-camera-release"></script>
+</body>
+</html>
+

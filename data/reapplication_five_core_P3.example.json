@@ -1,0 +1,14 @@
+{
+  "session_id": "five_core_reapply_P3",
+  "subject_id": "S01",
+  "electrode_placement_id": "P3_next_application",
+  "electrode_reapplied": true,
+  "arm_posture": "reference",
+  "forearm_orientation": "neutral",
+  "dynamic_arm_motion": false,
+  "gesture_set": "five_core_5class",
+  "collection_group_id": "five_core_reapplication_2026",
+  "collection_purpose": "held_out_evaluation",
+  "recording_date": null,
+  "notes": "New application: reproduce the P2 locations and channel order, photograph/measure placement, then record all six repetitions without moving electrodes."
+}

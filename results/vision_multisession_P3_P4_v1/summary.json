@@ -1,0 +1,2615 @@
+{
+  "scope": "exploratory within-known-applications grouped whole-trial folds; P5 required for independent validation",
+  "sessions": [
+    "vision_20261016_192456",
+    "vision_20261022_202644"
+  ],
+  "session_paths": [
+    "recordings/S01/vision_20261016_192456",
+    "prepared/vision_20261022_202644_3v3h"
+  ],
+  "metadata_sha256": [
+    "5798f236478e01a36234b239290bbfe73f374557a3cc61b8426dc03b57b76d4f",
+    "6cf0722ae7cc9288a0110ae3c4656ba984df68390e1b092147dc3c598432c828"
+  ],
+  "fold_test_repetitions": [
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      6
+    ]
+  ],
+  "normalization": "each session divided by its own recorded rest baseline before pooling",
+  "training_epochs": 31,
+  "seed": 7,
+  "augmentation": {
+    "gain": "per-trial channel factor log-uniform [1/1.5, 1.5] and global factor [1/1.25, 1.25], resampled each epoch",
+    "gain_dropout": "gain plus one post-preprocessing channel zeroed in 15% of trials each epoch"
+  },
+  "variants": {
+    "plain": {
+      "overall": {
+        "windows": 3612,
+        "raw": {
+          "accuracy": 0.785437430786268,
+          "balanced_accuracy": 0.785437430786268,
+          "macro_f1": 0.7848013407357303,
+          "labels": [
+            "fist",
+            "peace",
+            "pinch",
+            "point",
+            "rest",
+            "splayed",
+            "thumbs_up"
+          ],
+          "confusion_matrix": [
+            [
+              352,
+              6,
+              1,
+              108,
+              3,
+              22,
+              24
+            ],
+            [
+              0,
+              434,
+              38,
+              1,
+              23,
+              20,
+              0
+            ],
+            [
+              3,
+              29,
+              411,
+              0,
+              15,
+              58,
+              0
+            ],
+            [
+              71,
+              0,
+              0,
+              389,
+              21,
+              0,
+              35
+            ],
+            [
+              0,
+              13,
+              24,
+              6,
+              429,
+              23,
+              21
+            ],
+            [
+              3,
+              21,
+              82,
+              1,
+              22,
+              369,
+              18
+            ],
+            [
+              20,
+              1,
+              4,
+              22,
+              4,
+              12,
+              453
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "fist",
+              "precision": 0.7839643652561247,
+              "recall": 0.6821705426356589,
+              "f1": 0.7295336787564767,
+              "support": 516
+            },
+            {
+              "label": "peace",
+              "precision": 0.8611111111111112,
+              "recall": 0.8410852713178295,
+              "f1": 0.8509803921568627,
+              "support": 516
+            },
+            {
+              "label": "pinch",
+              "precision": 0.7339285714285714,
+              "recall": 0.7965116279069767,
+              "f1": 0.7639405204460966,
+              "support": 516
+            },
+            {
+              "label": "point",
+              "precision": 0.7381404174573055,
+              "recall": 0.7538759689922481,
+              "f1": 0.7459252157238735,
+              "support": 516
+            },
+            {
+              "label": "rest",
+              "precision": 0.8297872340425532,
+              "recall": 0.8313953488372093,
+              "f1": 0.8305905130687319,
+              "support": 516
+            },
+            {
+              "label": "splayed",
+              "precision": 0.7321428571428571,
+              "recall": 0.7151162790697675,
+              "f1": 0.7235294117647059,
+              "support": 516
+            },
+            {
+              "label": "thumbs_up",
+              "precision": 0.822141560798548,
+              "recall": 0.877906976744186,
+              "f1": 0.8491096532333646,
+              "support": 516
+            }
+          ],
+          "switch_count": 581,
+          "switch_observation_seconds": 141.12,
+          "switches_per_second": 4.117063492063492,
+          "rest_windows": 516,
+          "false_active_windows": 87,
+          "false_activation_fraction": 0.1686046511627907,
+          "false_active_window_fraction": 0.1686046511627907,
+          "false_activation_episodes": 28,
+          "rest_observation_seconds": 20.64,
+          "false_activation_episodes_per_minute": 81.3953488372093,
+          "false_activations_per_minute": 81.3953488372093
+        },
+        "smoothed": {
+          "accuracy": 0.8402547065337763,
+          "balanced_accuracy": 0.8402547065337763,
+          "macro_f1": 0.8399758702203687,
+          "labels": [
+            "fist",
+            "peace",
+            "pinch",
+            "point",
+            "rest",
+            "splayed",
+            "thumbs_up"
+          ],
+          "confusion_matrix": [
+            [
+              387,
+              3,
+              0,
+              97,
+              0,
+              15,
+              14
+            ],
+            [
+              0,
+              452,
+              38,
+              0,
+              12,
+              14,
+              0
+            ],
+            [
+              0,
+              24,
+              442,
+              0,
+              5,
+              45,
+              0
+            ],
+            [
+              64,
+              0,
+              0,
+              412,
+              21,
+              0,
+              19
+            ],
+            [
+              0,
+              10,
+              19,
+              2,
+              443,
+              27,
+              15
+            ],
+            [
+              0,
+              17,
+              65,
+              0,
+              8,
+              413,
+              13
+            ],
+            [
+              8,
+              0,
+              0,
+              17,
+              4,
+              1,
+              486
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "fist",
+              "precision": 0.8431372549019608,
+              "recall": 0.75,
+              "f1": 0.7938461538461539,
+              "support": 516
+            },
+            {
+              "label": "peace",
+              "precision": 0.8932806324110671,
+              "recall": 0.875968992248062,
+              "f1": 0.8845401174168297,
+              "support": 516
+            },
+            {
+              "label": "pinch",
+              "precision": 0.7836879432624113,
+              "recall": 0.8565891472868217,
+              "f1": 0.8185185185185185,
+              "support": 516
+            },
+            {
+              "label": "point",
+              "precision": 0.7803030303030303,
+              "recall": 0.7984496124031008,
+              "f1": 0.789272030651341,
+              "support": 516
+            },
+            {
+              "label": "rest",
+              "precision": 0.8985801217038539,
+              "recall": 0.8585271317829457,
+              "f1": 0.8780971258671952,
+              "support": 516
+            },
+            {
+              "label": "splayed",
+              "precision": 0.8019417475728156,
+              "recall": 0.8003875968992248,
+              "f1": 0.8011639185257032,
+              "support": 516
+            },
+            {
+              "label": "thumbs_up",
+              "precision": 0.8884826325411335,
+              "recall": 0.9418604651162791,
+              "f1": 0.9143932267168391,
+              "support": 516
+            }
+          ],
+          "switch_count": 162,
+          "switch_observation_seconds": 141.12,
+          "switches_per_second": 1.1479591836734693,
+          "rest_windows": 516,
+          "false_active_windows": 73,
+          "false_activation_fraction": 0.14147286821705427,
+          "false_active_window_fraction": 0.14147286821705427,
+          "false_activation_episodes": 11,
+          "rest_observation_seconds": 20.64,
+          "false_activation_episodes_per_minute": 31.97674418604651,
+          "false_activations_per_minute": 31.97674418604651
+        }
+      },
+      "per_session": {
+        "vision_20261016_192456": {
+          "windows": 1806,
+          "raw": {
+            "accuracy": 0.7652270210409745,
+            "balanced_accuracy": 0.7652270210409745,
+            "macro_f1": 0.7640215259386719,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                160,
+                6,
+                1,
+                60,
+                3,
+                15,
+                13
+              ],
+              [
+                0,
+                215,
+                10,
+                1,
+                17,
+                15,
+                0
+              ],
+              [
+                3,
+                11,
+                216,
+                0,
+                6,
+                22,
+                0
+              ],
+              [
+                24,
+                0,
+                0,
+                199,
+                21,
+                0,
+                14
+              ],
+              [
+                0,
+                6,
+                11,
+                6,
+                210,
+                6,
+                19
+              ],
+              [
+                1,
+                10,
+                55,
+                1,
+                16,
+                170,
+                5
+              ],
+              [
+                4,
+                1,
+                4,
+                21,
+                4,
+                12,
+                212
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.8333333333333334,
+                "recall": 0.6201550387596899,
+                "f1": 0.7111111111111111,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8634538152610441,
+                "recall": 0.8333333333333334,
+                "f1": 0.8481262327416174,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.7272727272727273,
+                "recall": 0.8372093023255814,
+                "f1": 0.7783783783783784,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.6909722222222222,
+                "recall": 0.7713178294573644,
+                "f1": 0.7289377289377289,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.7581227436823105,
+                "recall": 0.813953488372093,
+                "f1": 0.7850467289719626,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.7083333333333334,
+                "recall": 0.6589147286821705,
+                "f1": 0.6827309236947792,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.8060836501901141,
+                "recall": 0.8217054263565892,
+                "f1": 0.8138195777351248,
+                "support": 258
+              }
+            ],
+            "switch_count": 305,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 4.3225623582766435,
+            "rest_windows": 258,
+            "false_active_windows": 48,
+            "false_activation_fraction": 0.18604651162790697,
+            "false_active_window_fraction": 0.18604651162790697,
+            "false_activation_episodes": 14,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 81.3953488372093,
+            "false_activations_per_minute": 81.3953488372093
+          },
+          "smoothed": {
+            "accuracy": 0.8289036544850499,
+            "balanced_accuracy": 0.8289036544850497,
+            "macro_f1": 0.8280020340582326,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                168,
+                3,
+                0,
+                63,
+                0,
+                14,
+                10
+              ],
+              [
+                0,
+                225,
+                8,
+                0,
+                11,
+                14,
+                0
+              ],
+              [
+                0,
+                1,
+                238,
+                0,
+                0,
+                19,
+                0
+              ],
+              [
+                12,
+                0,
+                0,
+                220,
+                21,
+                0,
+                5
+              ],
+              [
+                0,
+                0,
+                11,
+                2,
+                221,
+                9,
+                15
+              ],
+              [
+                0,
+                4,
+                51,
+                0,
+                8,
+                189,
+                6
+              ],
+              [
+                0,
+                0,
+                0,
+                17,
+                4,
+                1,
+                236
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.9333333333333333,
+                "recall": 0.6511627906976745,
+                "f1": 0.7671232876712328,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.9656652360515021,
+                "recall": 0.872093023255814,
+                "f1": 0.9164969450101833,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.7727272727272727,
+                "recall": 0.9224806201550387,
+                "f1": 0.8409893992932862,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.7284768211920529,
+                "recall": 0.8527131782945736,
+                "f1": 0.7857142857142857,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.8339622641509434,
+                "recall": 0.8565891472868217,
+                "f1": 0.8451242829827916,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.7682926829268293,
+                "recall": 0.7325581395348837,
+                "f1": 0.75,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.8676470588235294,
+                "recall": 0.9147286821705426,
+                "f1": 0.8905660377358491,
+                "support": 258
+              }
+            ],
+            "switch_count": 82,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 1.1621315192743764,
+            "rest_windows": 258,
+            "false_active_windows": 37,
+            "false_activation_fraction": 0.1434108527131783,
+            "false_active_window_fraction": 0.1434108527131783,
+            "false_activation_episodes": 6,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 34.883720930232556,
+            "false_activations_per_minute": 34.883720930232556
+          }
+        },
+        "vision_20261022_202644": {
+          "windows": 1806,
+          "raw": {
+            "accuracy": 0.8056478405315615,
+            "balanced_accuracy": 0.8056478405315614,
+            "macro_f1": 0.8053334693868626,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                192,
+                0,
+                0,
+                48,
+                0,
+                7,
+                11
+              ],
+              [
+                0,
+                219,
+                28,
+                0,
+                6,
+                5,
+                0
+              ],
+              [
+                0,
+                18,
+                195,
+                0,
+                9,
+                36,
+                0
+              ],
+              [
+                47,
+                0,
+                0,
+                190,
+                0,
+                0,
+                21
+              ],
+              [
+                0,
+                7,
+                13,
+                0,
+                219,
+                17,
+                2
+              ],
+              [
+                2,
+                11,
+                27,
+                0,
+                6,
+                199,
+                13
+              ],
+              [
+                16,
+                0,
+                0,
+                1,
+                0,
+                0,
+                241
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.7470817120622568,
+                "recall": 0.7441860465116279,
+                "f1": 0.7456310679611651,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8588235294117647,
+                "recall": 0.8488372093023255,
+                "f1": 0.8538011695906432,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.7414448669201521,
+                "recall": 0.7558139534883721,
+                "f1": 0.7485604606525912,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.7949790794979079,
+                "recall": 0.7364341085271318,
+                "f1": 0.7645875251509054,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.9125,
+                "recall": 0.8488372093023255,
+                "f1": 0.8795180722891566,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.7537878787878788,
+                "recall": 0.7713178294573644,
+                "f1": 0.7624521072796935,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.8368055555555556,
+                "recall": 0.9341085271317829,
+                "f1": 0.8827838827838828,
+                "support": 258
+              }
+            ],
+            "switch_count": 276,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 3.91156462585034,
+            "rest_windows": 258,
+            "false_active_windows": 39,
+            "false_activation_fraction": 0.1511627906976744,
+            "false_active_window_fraction": 0.1511627906976744,
+            "false_activation_episodes": 14,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 81.3953488372093,
+            "false_activations_per_minute": 81.3953488372093
+          },
+          "smoothed": {
+            "accuracy": 0.8516057585825028,
+            "balanced_accuracy": 0.8516057585825028,
+            "macro_f1": 0.8513653168909715,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                219,
+                0,
+                0,
+                34,
+                0,
+                1,
+                4
+              ],
+              [
+                0,
+                227,
+                30,
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                23,
+                204,
+                0,
+                5,
+                26,
+                0
+              ],
+              [
+                52,
+                0,
+                0,
+                192,
+                0,
+                0,
+                14
+              ],
+              [
+                0,
+                10,
+                8,
+                0,
+                222,
+                18,
+                0
+              ],
+              [
+                0,
+                13,
+                14,
+                0,
+                0,
+                224,
+                7
+              ],
+              [
+                8,
+                0,
+                0,
+                0,
+                0,
+                0,
+                250
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.7849462365591398,
+                "recall": 0.8488372093023255,
+                "f1": 0.8156424581005587,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8315018315018315,
+                "recall": 0.8798449612403101,
+                "f1": 0.8549905838041432,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.796875,
+                "recall": 0.7906976744186046,
+                "f1": 0.7937743190661478,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.8495575221238938,
+                "recall": 0.7441860465116279,
+                "f1": 0.7933884297520661,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.9736842105263158,
+                "recall": 0.8604651162790697,
+                "f1": 0.9135802469135802,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.8327137546468402,
+                "recall": 0.8682170542635659,
+                "f1": 0.8500948766603416,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.9090909090909091,
+                "recall": 0.9689922480620154,
+                "f1": 0.9380863039399625,
+                "support": 258
+              }
+            ],
+            "switch_count": 80,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 1.1337868480725624,
+            "rest_windows": 258,
+            "false_active_windows": 36,
+            "false_activation_fraction": 0.13953488372093023,
+            "false_active_window_fraction": 0.13953488372093023,
+            "false_activation_episodes": 5,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 29.069767441860463,
+            "false_activations_per_minute": 29.069767441860463
+          }
+        }
+      }
+    },
+    "gain": {
+      "overall": {
+        "windows": 3612,
+        "raw": {
+          "accuracy": 0.7657807308970099,
+          "balanced_accuracy": 0.76578073089701,
+          "macro_f1": 0.763660896479864,
+          "labels": [
+            "fist",
+            "peace",
+            "pinch",
+            "point",
+            "rest",
+            "splayed",
+            "thumbs_up"
+          ],
+          "confusion_matrix": [
+            [
+              308,
+              6,
+              5,
+              164,
+              7,
+              9,
+              17
+            ],
+            [
+              5,
+              421,
+              43,
+              2,
+              34,
+              9,
+              2
+            ],
+            [
+              0,
+              26,
+              425,
+              2,
+              19,
+              44,
+              0
+            ],
+            [
+              59,
+              0,
+              1,
+              402,
+              37,
+              0,
+              17
+            ],
+            [
+              0,
+              15,
+              22,
+              1,
+              459,
+              10,
+              9
+            ],
+            [
+              1,
+              31,
+              115,
+              1,
+              38,
+              316,
+              14
+            ],
+            [
+              22,
+              0,
+              0,
+              37,
+              11,
+              11,
+              435
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "fist",
+              "precision": 0.779746835443038,
+              "recall": 0.5968992248062015,
+              "f1": 0.6761800219538968,
+              "support": 516
+            },
+            {
+              "label": "peace",
+              "precision": 0.843687374749499,
+              "recall": 0.8158914728682171,
+              "f1": 0.8295566502463054,
+              "support": 516
+            },
+            {
+              "label": "pinch",
+              "precision": 0.6955810147299509,
+              "recall": 0.8236434108527132,
+              "f1": 0.7542147293700089,
+              "support": 516
+            },
+            {
+              "label": "point",
+              "precision": 0.6600985221674877,
+              "recall": 0.7790697674418605,
+              "f1": 0.7146666666666667,
+              "support": 516
+            },
+            {
+              "label": "rest",
+              "precision": 0.7586776859504132,
+              "recall": 0.8895348837209303,
+              "f1": 0.8189116859946476,
+              "support": 516
+            },
+            {
+              "label": "splayed",
+              "precision": 0.7919799498746867,
+              "recall": 0.6124031007751938,
+              "f1": 0.6907103825136612,
+              "support": 516
+            },
+            {
+              "label": "thumbs_up",
+              "precision": 0.8805668016194332,
+              "recall": 0.8430232558139535,
+              "f1": 0.8613861386138614,
+              "support": 516
+            }
+          ],
+          "switch_count": 567,
+          "switch_observation_seconds": 141.12,
+          "switches_per_second": 4.017857142857142,
+          "rest_windows": 516,
+          "false_active_windows": 57,
+          "false_activation_fraction": 0.11046511627906977,
+          "false_active_window_fraction": 0.11046511627906977,
+          "false_activation_episodes": 19,
+          "rest_observation_seconds": 20.64,
+          "false_activation_episodes_per_minute": 55.23255813953488,
+          "false_activations_per_minute": 55.23255813953488
+        },
+        "smoothed": {
+          "accuracy": 0.82281284606866,
+          "balanced_accuracy": 0.8228128460686601,
+          "macro_f1": 0.8205072950455774,
+          "labels": [
+            "fist",
+            "peace",
+            "pinch",
+            "point",
+            "rest",
+            "splayed",
+            "thumbs_up"
+          ],
+          "confusion_matrix": [
+            [
+              333,
+              4,
+              2,
+              154,
+              5,
+              5,
+              13
+            ],
+            [
+              0,
+              452,
+              35,
+              0,
+              22,
+              7,
+              0
+            ],
+            [
+              0,
+              13,
+              452,
+              0,
+              10,
+              41,
+              0
+            ],
+            [
+              46,
+              0,
+              0,
+              432,
+              27,
+              0,
+              11
+            ],
+            [
+              0,
+              15,
+              9,
+              0,
+              481,
+              6,
+              5
+            ],
+            [
+              0,
+              39,
+              86,
+              0,
+              29,
+              348,
+              14
+            ],
+            [
+              6,
+              0,
+              0,
+              28,
+              6,
+              2,
+              474
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "fist",
+              "precision": 0.8649350649350649,
+              "recall": 0.6453488372093024,
+              "f1": 0.7391786903440621,
+              "support": 516
+            },
+            {
+              "label": "peace",
+              "precision": 0.864244741873805,
+              "recall": 0.875968992248062,
+              "f1": 0.8700673724735323,
+              "support": 516
+            },
+            {
+              "label": "pinch",
+              "precision": 0.773972602739726,
+              "recall": 0.875968992248062,
+              "f1": 0.8218181818181818,
+              "support": 516
+            },
+            {
+              "label": "point",
+              "precision": 0.7035830618892508,
+              "recall": 0.8372093023255814,
+              "f1": 0.7646017699115044,
+              "support": 516
+            },
+            {
+              "label": "rest",
+              "precision": 0.8293103448275863,
+              "recall": 0.9321705426356589,
+              "f1": 0.8777372262773723,
+              "support": 516
+            },
+            {
+              "label": "splayed",
+              "precision": 0.8508557457212714,
+              "recall": 0.6744186046511628,
+              "f1": 0.7524324324324324,
+              "support": 516
+            },
+            {
+              "label": "thumbs_up",
+              "precision": 0.9168278529980658,
+              "recall": 0.9186046511627907,
+              "f1": 0.9177153920619555,
+              "support": 516
+            }
+          ],
+          "switch_count": 152,
+          "switch_observation_seconds": 141.12,
+          "switches_per_second": 1.0770975056689343,
+          "rest_windows": 516,
+          "false_active_windows": 35,
+          "false_activation_fraction": 0.06782945736434108,
+          "false_active_window_fraction": 0.06782945736434108,
+          "false_activation_episodes": 7,
+          "rest_observation_seconds": 20.64,
+          "false_activation_episodes_per_minute": 20.348837209302324,
+          "false_activations_per_minute": 20.348837209302324
+        }
+      },
+      "per_session": {
+        "vision_20261016_192456": {
+          "windows": 1806,
+          "raw": {
+            "accuracy": 0.7458471760797342,
+            "balanced_accuracy": 0.7458471760797342,
+            "macro_f1": 0.7413645982520475,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                139,
+                6,
+                5,
+                88,
+                7,
+                6,
+                7
+              ],
+              [
+                0,
+                220,
+                7,
+                2,
+                26,
+                1,
+                2
+              ],
+              [
+                0,
+                15,
+                206,
+                2,
+                10,
+                25,
+                0
+              ],
+              [
+                6,
+                0,
+                0,
+                214,
+                37,
+                0,
+                1
+              ],
+              [
+                0,
+                10,
+                7,
+                1,
+                231,
+                0,
+                9
+              ],
+              [
+                0,
+                19,
+                66,
+                0,
+                37,
+                130,
+                6
+              ],
+              [
+                4,
+                0,
+                0,
+                29,
+                9,
+                9,
+                207
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.9328859060402684,
+                "recall": 0.5387596899224806,
+                "f1": 0.683046683046683,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8148148148148148,
+                "recall": 0.8527131782945736,
+                "f1": 0.8333333333333334,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.7079037800687286,
+                "recall": 0.7984496124031008,
+                "f1": 0.7504553734061931,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.6369047619047619,
+                "recall": 0.8294573643410853,
+                "f1": 0.7205387205387206,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.6470588235294118,
+                "recall": 0.8953488372093024,
+                "f1": 0.751219512195122,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.7602339181286549,
+                "recall": 0.5038759689922481,
+                "f1": 0.6060606060606061,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.8922413793103449,
+                "recall": 0.8023255813953488,
+                "f1": 0.8448979591836735,
+                "support": 258
+              }
+            ],
+            "switch_count": 296,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 4.195011337868481,
+            "rest_windows": 258,
+            "false_active_windows": 27,
+            "false_activation_fraction": 0.10465116279069768,
+            "false_active_window_fraction": 0.10465116279069768,
+            "false_activation_episodes": 11,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 63.95348837209302,
+            "false_activations_per_minute": 63.95348837209302
+          },
+          "smoothed": {
+            "accuracy": 0.801218161683278,
+            "balanced_accuracy": 0.8012181616832779,
+            "macro_f1": 0.7956562723177739,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                145,
+                4,
+                2,
+                93,
+                5,
+                2,
+                7
+              ],
+              [
+                0,
+                234,
+                5,
+                0,
+                19,
+                0,
+                0
+              ],
+              [
+                0,
+                7,
+                218,
+                0,
+                6,
+                27,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                230,
+                27,
+                0,
+                0
+              ],
+              [
+                0,
+                8,
+                2,
+                0,
+                243,
+                0,
+                5
+              ],
+              [
+                0,
+                21,
+                57,
+                0,
+                29,
+                144,
+                7
+              ],
+              [
+                0,
+                0,
+                0,
+                17,
+                6,
+                2,
+                233
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.9931506849315068,
+                "recall": 0.562015503875969,
+                "f1": 0.7178217821782178,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8540145985401459,
+                "recall": 0.9069767441860465,
+                "f1": 0.8796992481203008,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.7676056338028169,
+                "recall": 0.8449612403100775,
+                "f1": 0.8044280442804428,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.6764705882352942,
+                "recall": 0.8914728682170543,
+                "f1": 0.7692307692307693,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.7253731343283583,
+                "recall": 0.9418604651162791,
+                "f1": 0.8195615514333895,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.8228571428571428,
+                "recall": 0.5581395348837209,
+                "f1": 0.6651270207852193,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.9246031746031746,
+                "recall": 0.9031007751937985,
+                "f1": 0.9137254901960784,
+                "support": 258
+              }
+            ],
+            "switch_count": 78,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 1.1054421768707483,
+            "rest_windows": 258,
+            "false_active_windows": 15,
+            "false_activation_fraction": 0.05813953488372093,
+            "false_active_window_fraction": 0.05813953488372093,
+            "false_activation_episodes": 3,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 17.441860465116278,
+            "false_activations_per_minute": 17.441860465116278
+          }
+        },
+        "vision_20261022_202644": {
+          "windows": 1806,
+          "raw": {
+            "accuracy": 0.7857142857142857,
+            "balanced_accuracy": 0.7857142857142857,
+            "macro_f1": 0.786503039279955,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                169,
+                0,
+                0,
+                76,
+                0,
+                3,
+                10
+              ],
+              [
+                5,
+                201,
+                36,
+                0,
+                8,
+                8,
+                0
+              ],
+              [
+                0,
+                11,
+                219,
+                0,
+                9,
+                19,
+                0
+              ],
+              [
+                53,
+                0,
+                1,
+                188,
+                0,
+                0,
+                16
+              ],
+              [
+                0,
+                5,
+                15,
+                0,
+                228,
+                10,
+                0
+              ],
+              [
+                1,
+                12,
+                49,
+                1,
+                1,
+                186,
+                8
+              ],
+              [
+                18,
+                0,
+                0,
+                8,
+                2,
+                2,
+                228
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.6869918699186992,
+                "recall": 0.6550387596899225,
+                "f1": 0.6706349206349206,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8777292576419214,
+                "recall": 0.7790697674418605,
+                "f1": 0.8254620123203286,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.684375,
+                "recall": 0.8488372093023255,
+                "f1": 0.7577854671280276,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.6886446886446886,
+                "recall": 0.7286821705426356,
+                "f1": 0.7080979284369114,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.9193548387096774,
+                "recall": 0.8837209302325582,
+                "f1": 0.9011857707509882,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.8157894736842105,
+                "recall": 0.7209302325581395,
+                "f1": 0.7654320987654321,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.8702290076335878,
+                "recall": 0.8837209302325582,
+                "f1": 0.8769230769230769,
+                "support": 258
+              }
+            ],
+            "switch_count": 271,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 3.840702947845805,
+            "rest_windows": 258,
+            "false_active_windows": 30,
+            "false_activation_fraction": 0.11627906976744186,
+            "false_active_window_fraction": 0.11627906976744186,
+            "false_activation_episodes": 8,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 46.51162790697674,
+            "false_activations_per_minute": 46.51162790697674
+          },
+          "smoothed": {
+            "accuracy": 0.844407530454042,
+            "balanced_accuracy": 0.844407530454042,
+            "macro_f1": 0.8445434914521258,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                188,
+                0,
+                0,
+                61,
+                0,
+                3,
+                6
+              ],
+              [
+                0,
+                218,
+                30,
+                0,
+                3,
+                7,
+                0
+              ],
+              [
+                0,
+                6,
+                234,
+                0,
+                4,
+                14,
+                0
+              ],
+              [
+                45,
+                0,
+                0,
+                202,
+                0,
+                0,
+                11
+              ],
+              [
+                0,
+                7,
+                7,
+                0,
+                238,
+                6,
+                0
+              ],
+              [
+                0,
+                18,
+                29,
+                0,
+                0,
+                204,
+                7
+              ],
+              [
+                6,
+                0,
+                0,
+                11,
+                0,
+                0,
+                241
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.7866108786610879,
+                "recall": 0.7286821705426356,
+                "f1": 0.7565392354124748,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8755020080321285,
+                "recall": 0.8449612403100775,
+                "f1": 0.8599605522682445,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.78,
+                "recall": 0.9069767441860465,
+                "f1": 0.8387096774193549,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.7372262773722628,
+                "recall": 0.7829457364341085,
+                "f1": 0.7593984962406015,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.9714285714285714,
+                "recall": 0.9224806201550387,
+                "f1": 0.9463220675944334,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.8717948717948718,
+                "recall": 0.7906976744186046,
+                "f1": 0.8292682926829268,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.909433962264151,
+                "recall": 0.9341085271317829,
+                "f1": 0.9216061185468452,
+                "support": 258
+              }
+            ],
+            "switch_count": 74,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 1.0487528344671202,
+            "rest_windows": 258,
+            "false_active_windows": 20,
+            "false_activation_fraction": 0.07751937984496124,
+            "false_active_window_fraction": 0.07751937984496124,
+            "false_activation_episodes": 4,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 23.25581395348837,
+            "false_activations_per_minute": 23.25581395348837
+          }
+        }
+      }
+    },
+    "gain_dropout": {
+      "overall": {
+        "windows": 3612,
+        "raw": {
+          "accuracy": 0.7621816168327796,
+          "balanced_accuracy": 0.7621816168327796,
+          "macro_f1": 0.7595010456915917,
+          "labels": [
+            "fist",
+            "peace",
+            "pinch",
+            "point",
+            "rest",
+            "splayed",
+            "thumbs_up"
+          ],
+          "confusion_matrix": [
+            [
+              310,
+              6,
+              7,
+              153,
+              3,
+              5,
+              32
+            ],
+            [
+              5,
+              449,
+              30,
+              2,
+              20,
+              10,
+              0
+            ],
+            [
+              1,
+              34,
+              414,
+              3,
+              23,
+              41,
+              0
+            ],
+            [
+              49,
+              0,
+              0,
+              400,
+              46,
+              0,
+              21
+            ],
+            [
+              0,
+              20,
+              30,
+              7,
+              434,
+              13,
+              12
+            ],
+            [
+              4,
+              28,
+              125,
+              2,
+              28,
+              303,
+              26
+            ],
+            [
+              7,
+              1,
+              0,
+              44,
+              3,
+              18,
+              443
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "fist",
+              "precision": 0.824468085106383,
+              "recall": 0.6007751937984496,
+              "f1": 0.695067264573991,
+              "support": 516
+            },
+            {
+              "label": "peace",
+              "precision": 0.8345724907063197,
+              "recall": 0.8701550387596899,
+              "f1": 0.8519924098671727,
+              "support": 516
+            },
+            {
+              "label": "pinch",
+              "precision": 0.6831683168316832,
+              "recall": 0.8023255813953488,
+              "f1": 0.7379679144385026,
+              "support": 516
+            },
+            {
+              "label": "point",
+              "precision": 0.6546644844517185,
+              "recall": 0.7751937984496124,
+              "f1": 0.709849157054126,
+              "support": 516
+            },
+            {
+              "label": "rest",
+              "precision": 0.7791741472172352,
+              "recall": 0.8410852713178295,
+              "f1": 0.8089468779123952,
+              "support": 516
+            },
+            {
+              "label": "splayed",
+              "precision": 0.7769230769230769,
+              "recall": 0.5872093023255814,
+              "f1": 0.6688741721854304,
+              "support": 516
+            },
+            {
+              "label": "thumbs_up",
+              "precision": 0.8295880149812734,
+              "recall": 0.8585271317829457,
+              "f1": 0.8438095238095238,
+              "support": 516
+            }
+          ],
+          "switch_count": 634,
+          "switch_observation_seconds": 141.12,
+          "switches_per_second": 4.492630385487528,
+          "rest_windows": 516,
+          "false_active_windows": 82,
+          "false_activation_fraction": 0.15891472868217055,
+          "false_active_window_fraction": 0.15891472868217055,
+          "false_activation_episodes": 30,
+          "rest_observation_seconds": 20.64,
+          "false_activation_episodes_per_minute": 87.20930232558139,
+          "false_activations_per_minute": 87.20930232558139
+        },
+        "smoothed": {
+          "accuracy": 0.8217054263565892,
+          "balanced_accuracy": 0.8217054263565892,
+          "macro_f1": 0.8193798892423539,
+          "labels": [
+            "fist",
+            "peace",
+            "pinch",
+            "point",
+            "rest",
+            "splayed",
+            "thumbs_up"
+          ],
+          "confusion_matrix": [
+            [
+              326,
+              6,
+              2,
+              159,
+              5,
+              0,
+              18
+            ],
+            [
+              3,
+              478,
+              15,
+              0,
+              12,
+              8,
+              0
+            ],
+            [
+              0,
+              22,
+              455,
+              1,
+              11,
+              27,
+              0
+            ],
+            [
+              47,
+              0,
+              0,
+              412,
+              47,
+              0,
+              10
+            ],
+            [
+              0,
+              20,
+              14,
+              0,
+              469,
+              5,
+              8
+            ],
+            [
+              0,
+              27,
+              98,
+              0,
+              18,
+              354,
+              19
+            ],
+            [
+              4,
+              0,
+              0,
+              34,
+              2,
+              2,
+              474
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "fist",
+              "precision": 0.8578947368421053,
+              "recall": 0.6317829457364341,
+              "f1": 0.7276785714285714,
+              "support": 516
+            },
+            {
+              "label": "peace",
+              "precision": 0.864376130198915,
+              "recall": 0.9263565891472868,
+              "f1": 0.8942937324602432,
+              "support": 516
+            },
+            {
+              "label": "pinch",
+              "precision": 0.7791095890410958,
+              "recall": 0.8817829457364341,
+              "f1": 0.8272727272727273,
+              "support": 516
+            },
+            {
+              "label": "point",
+              "precision": 0.6798679867986799,
+              "recall": 0.7984496124031008,
+              "f1": 0.7344028520499108,
+              "support": 516
+            },
+            {
+              "label": "rest",
+              "precision": 0.8315602836879432,
+              "recall": 0.9089147286821705,
+              "f1": 0.8685185185185185,
+              "support": 516
+            },
+            {
+              "label": "splayed",
+              "precision": 0.8939393939393939,
+              "recall": 0.686046511627907,
+              "f1": 0.7763157894736842,
+              "support": 516
+            },
+            {
+              "label": "thumbs_up",
+              "precision": 0.8960302457466919,
+              "recall": 0.9186046511627907,
+              "f1": 0.907177033492823,
+              "support": 516
+            }
+          ],
+          "switch_count": 160,
+          "switch_observation_seconds": 141.12,
+          "switches_per_second": 1.1337868480725624,
+          "rest_windows": 516,
+          "false_active_windows": 47,
+          "false_activation_fraction": 0.09108527131782945,
+          "false_active_window_fraction": 0.09108527131782945,
+          "false_activation_episodes": 9,
+          "rest_observation_seconds": 20.64,
+          "false_activation_episodes_per_minute": 26.162790697674417,
+          "false_activations_per_minute": 26.162790697674417
+        }
+      },
+      "per_session": {
+        "vision_20261016_192456": {
+          "windows": 1806,
+          "raw": {
+            "accuracy": 0.7331118493909191,
+            "balanced_accuracy": 0.7331118493909191,
+            "macro_f1": 0.729114767988594,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                140,
+                6,
+                7,
+                77,
+                3,
+                5,
+                20
+              ],
+              [
+                2,
+                223,
+                9,
+                2,
+                20,
+                2,
+                0
+              ],
+              [
+                0,
+                13,
+                204,
+                3,
+                13,
+                25,
+                0
+              ],
+              [
+                5,
+                0,
+                0,
+                197,
+                46,
+                0,
+                10
+              ],
+              [
+                0,
+                7,
+                10,
+                5,
+                217,
+                7,
+                12
+              ],
+              [
+                4,
+                11,
+                75,
+                1,
+                23,
+                130,
+                14
+              ],
+              [
+                0,
+                0,
+                0,
+                35,
+                3,
+                7,
+                213
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.9271523178807947,
+                "recall": 0.5426356589147286,
+                "f1": 0.684596577017115,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8576923076923076,
+                "recall": 0.8643410852713178,
+                "f1": 0.861003861003861,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.6688524590163935,
+                "recall": 0.7906976744186046,
+                "f1": 0.7246891651865008,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.615625,
+                "recall": 0.7635658914728682,
+                "f1": 0.6816608996539792,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.6676923076923077,
+                "recall": 0.8410852713178295,
+                "f1": 0.7444253859348199,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.7386363636363636,
+                "recall": 0.5038759689922481,
+                "f1": 0.5990783410138248,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.79182156133829,
+                "recall": 0.8255813953488372,
+                "f1": 0.8083491461100569,
+                "support": 258
+              }
+            ],
+            "switch_count": 345,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 4.889455782312925,
+            "rest_windows": 258,
+            "false_active_windows": 41,
+            "false_activation_fraction": 0.15891472868217055,
+            "false_active_window_fraction": 0.15891472868217055,
+            "false_activation_episodes": 15,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 87.20930232558139,
+            "false_activations_per_minute": 87.20930232558139
+          },
+          "smoothed": {
+            "accuracy": 0.8017718715393134,
+            "balanced_accuracy": 0.8017718715393134,
+            "macro_f1": 0.7987477592745561,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                150,
+                6,
+                2,
+                84,
+                5,
+                0,
+                11
+              ],
+              [
+                3,
+                241,
+                1,
+                0,
+                12,
+                1,
+                0
+              ],
+              [
+                0,
+                11,
+                221,
+                1,
+                10,
+                15,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                204,
+                47,
+                0,
+                5
+              ],
+              [
+                0,
+                6,
+                4,
+                0,
+                238,
+                2,
+                8
+              ],
+              [
+                0,
+                5,
+                62,
+                0,
+                18,
+                161,
+                12
+              ],
+              [
+                0,
+                0,
+                0,
+                23,
+                2,
+                0,
+                233
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.967741935483871,
+                "recall": 0.5813953488372093,
+                "f1": 0.7263922518159807,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.895910780669145,
+                "recall": 0.9341085271317829,
+                "f1": 0.9146110056925996,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.7620689655172413,
+                "recall": 0.8565891472868217,
+                "f1": 0.8065693430656934,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.6538461538461539,
+                "recall": 0.7906976744186046,
+                "f1": 0.7157894736842105,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.7168674698795181,
+                "recall": 0.9224806201550387,
+                "f1": 0.8067796610169492,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.8994413407821229,
+                "recall": 0.624031007751938,
+                "f1": 0.7368421052631579,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.8661710037174721,
+                "recall": 0.9031007751937985,
+                "f1": 0.8842504743833017,
+                "support": 258
+              }
+            ],
+            "switch_count": 91,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 1.2896825396825395,
+            "rest_windows": 258,
+            "false_active_windows": 20,
+            "false_activation_fraction": 0.07751937984496124,
+            "false_active_window_fraction": 0.07751937984496124,
+            "false_activation_episodes": 4,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 23.25581395348837,
+            "false_activations_per_minute": 23.25581395348837
+          }
+        },
+        "vision_20261022_202644": {
+          "windows": 1806,
+          "raw": {
+            "accuracy": 0.79125138427464,
+            "balanced_accuracy": 0.7912513842746401,
+            "macro_f1": 0.7909130949845554,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                170,
+                0,
+                0,
+                76,
+                0,
+                0,
+                12
+              ],
+              [
+                3,
+                226,
+                21,
+                0,
+                0,
+                8,
+                0
+              ],
+              [
+                1,
+                21,
+                210,
+                0,
+                10,
+                16,
+                0
+              ],
+              [
+                44,
+                0,
+                0,
+                203,
+                0,
+                0,
+                11
+              ],
+              [
+                0,
+                13,
+                20,
+                2,
+                217,
+                6,
+                0
+              ],
+              [
+                0,
+                17,
+                50,
+                1,
+                5,
+                173,
+                12
+              ],
+              [
+                7,
+                1,
+                0,
+                9,
+                0,
+                11,
+                230
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.7555555555555555,
+                "recall": 0.6589147286821705,
+                "f1": 0.7039337474120083,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8129496402877698,
+                "recall": 0.875968992248062,
+                "f1": 0.8432835820895522,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.6976744186046512,
+                "recall": 0.813953488372093,
+                "f1": 0.7513416815742398,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.697594501718213,
+                "recall": 0.7868217054263565,
+                "f1": 0.7395264116575592,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.9353448275862069,
+                "recall": 0.8410852713178295,
+                "f1": 0.8857142857142857,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.8084112149532711,
+                "recall": 0.6705426356589147,
+                "f1": 0.7330508474576272,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.8679245283018868,
+                "recall": 0.8914728682170543,
+                "f1": 0.8795411089866156,
+                "support": 258
+              }
+            ],
+            "switch_count": 289,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 4.095804988662131,
+            "rest_windows": 258,
+            "false_active_windows": 41,
+            "false_activation_fraction": 0.15891472868217055,
+            "false_active_window_fraction": 0.15891472868217055,
+            "false_activation_episodes": 15,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 87.20930232558139,
+            "false_activations_per_minute": 87.20930232558139
+          },
+          "smoothed": {
+            "accuracy": 0.8416389811738649,
+            "balanced_accuracy": 0.841638981173865,
+            "macro_f1": 0.8415367344235881,
+            "labels": [
+              "fist",
+              "peace",
+              "pinch",
+              "point",
+              "rest",
+              "splayed",
+              "thumbs_up"
+            ],
+            "confusion_matrix": [
+              [
+                176,
+                0,
+                0,
+                75,
+                0,
+                0,
+                7
+              ],
+              [
+                0,
+                237,
+                14,
+                0,
+                0,
+                7,
+                0
+              ],
+              [
+                0,
+                11,
+                234,
+                0,
+                1,
+                12,
+                0
+              ],
+              [
+                45,
+                0,
+                0,
+                208,
+                0,
+                0,
+                5
+              ],
+              [
+                0,
+                14,
+                10,
+                0,
+                231,
+                3,
+                0
+              ],
+              [
+                0,
+                22,
+                36,
+                0,
+                0,
+                193,
+                7
+              ],
+              [
+                4,
+                0,
+                0,
+                11,
+                0,
+                2,
+                241
+              ]
+            ],
+            "per_class": [
+              {
+                "label": "fist",
+                "precision": 0.7822222222222223,
+                "recall": 0.6821705426356589,
+                "f1": 0.7287784679089027,
+                "support": 258
+              },
+              {
+                "label": "peace",
+                "precision": 0.8345070422535211,
+                "recall": 0.9186046511627907,
+                "f1": 0.8745387453874539,
+                "support": 258
+              },
+              {
+                "label": "pinch",
+                "precision": 0.7959183673469388,
+                "recall": 0.9069767441860465,
+                "f1": 0.8478260869565217,
+                "support": 258
+              },
+              {
+                "label": "point",
+                "precision": 0.7074829931972789,
+                "recall": 0.8062015503875969,
+                "f1": 0.7536231884057971,
+                "support": 258
+              },
+              {
+                "label": "rest",
+                "precision": 0.9956896551724138,
+                "recall": 0.8953488372093024,
+                "f1": 0.9428571428571428,
+                "support": 258
+              },
+              {
+                "label": "splayed",
+                "precision": 0.8894009216589862,
+                "recall": 0.748062015503876,
+                "f1": 0.8126315789473684,
+                "support": 258
+              },
+              {
+                "label": "thumbs_up",
+                "precision": 0.926923076923077,
+                "recall": 0.9341085271317829,
+                "f1": 0.9305019305019305,
+                "support": 258
+              }
+            ],
+            "switch_count": 69,
+            "switch_observation_seconds": 70.56,
+            "switches_per_second": 0.977891156462585,
+            "rest_windows": 258,
+            "false_active_windows": 27,
+            "false_activation_fraction": 0.10465116279069768,
+            "false_active_window_fraction": 0.10465116279069768,
+            "false_activation_episodes": 5,
+            "rest_observation_seconds": 10.32,
+            "false_activation_episodes_per_minute": 29.069767441860463,
+            "false_activations_per_minute": 29.069767441860463
+          }
+        }
+      }
+    }
+  }
+}

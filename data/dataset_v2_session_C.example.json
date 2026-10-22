@@ -1,0 +1,12 @@
+{
+  "session_id": "v2_session_C",
+  "subject_id": "S01",
+  "electrode_placement_id": "P4",
+  "electrode_reapplied": true,
+  "arm_posture": "reference",
+  "forearm_orientation": "neutral",
+  "dynamic_arm_motion": false,
+  "gesture_set": "dataset_v2_9class",
+  "recording_date": null,
+  "notes": "Collect on a different day from Session A, using the same nominal arrangement with a new application ID."
+}

@@ -1,0 +1,34 @@
+{
+    "session_id":  "four_core_P3_posture_challenge_20261010",
+    "subject_id":  "S01",
+    "electrode_placement_id":  "P3_next_application",
+    "electrode_reapplied":  true,
+    "arm_posture":  "reference",
+    "forearm_orientation":  "neutral",
+    "dynamic_arm_motion":  false,
+    "gesture_set":  "four_core_4class",
+    "collection_group_id":  "four_core_confirmation_2026",
+    "collection_purpose":  "held_out_evaluation",
+    "recording_date":  "2026-10-10",
+    "notes":  "P3 same-application posture challenge. Reference arm/position: seated, left upper arm beside the torso, elbow bent, forearm vertical in a neutral handshake orientation. Keep the frozen four-class P3 model and decision policy unchanged until this recording is scored.",
+    "block_conditions":  {
+                             "elbow_extended":  {
+                                                    "shoulder_position":  "beside_torso",
+                                                    "elbow_position":  "comfortably_nearly_straight",
+                                                    "forearm_orientation":  "neutral",
+                                                    "notes":  "Let the left arm hang down beside your body with the elbow comfortably nearly straight and the thumb pointing forward. Keep the arm still during every hold."
+                                                },
+                             "elbow_flexed":  {
+                                                  "shoulder_position":  "beside_torso",
+                                                  "elbow_position":  "bent_forearm_horizontal",
+                                                  "forearm_orientation":  "pronated",
+                                                  "notes":  "Keep the left elbow beside your body and the forearm horizontal in front of you, with the palm facing the floor. Keep the arm still during every hold."
+                                              },
+                             "arm_abducted":  {
+                                                  "shoulder_position":  "comfortably_abducted",
+                                                  "elbow_position":  "comfortable_bend",
+                                                  "forearm_orientation":  "supinated",
+                                                  "notes":  "Hold the left arm comfortably away from your torso to the side, with the palm facing upward. Choose a sustainable height and keep it unchanged throughout this block."
+                                              }
+                         }
+}

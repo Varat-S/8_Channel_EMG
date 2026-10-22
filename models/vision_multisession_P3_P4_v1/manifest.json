@@ -1,0 +1,20 @@
+{
+  "status": "frozen before P5 collection",
+  "primary_variant": "plain",
+  "secondary_variants": [
+    "gain",
+    "gain_dropout"
+  ],
+  "training_sessions": [
+    "vision_20261016_192456",
+    "vision_20261022_202644"
+  ],
+  "development_results_sha256": "a4eaf5e3df02510ebe0553a56f0c3ad93544635461b8ade5781cffb2d094e12f",
+  "p5_protocol_sha256": "53dd8b1b477f4c4775c89fe446bdf8f9a09721268fa5a855f7bd8132b906e4ec",
+  "model_sha256": {
+    "plain": "8764958fd371d7486b7cb8d4a35710f2787f26cc6bd49736bb997ec32bd25995",
+    "gain": "d7f1826581fd2d3d0e69832ce1ab5fa21faaf3d9ce56e14ea45964fc356d2ee9",
+    "gain_dropout": "6ce4713792a509af823b8d76a07af303a5dc5100716628be3bed38e0d209aa60"
+  },
+  "selection_rule": "plain selected using P3/P4 whole-trial grouped folds; P5 primary score is plain zero-shot smoothed macro F1"
+}

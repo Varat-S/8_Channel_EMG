@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live EMG inference</title><link rel="stylesheet" href="vision.css?v=2"></head>
+<body><main><header><div><p class="eyebrow">URECA · LOCAL INFERENCE</p><h1>Live EMG inference</h1>
+<p class="lede" id="modeDescription">Loading model and baseline details…</p></div></header>
+<section id="stage" class="panel hand-stage" aria-label="Animated 3D hand">
+  <div class="hand-hint">Drag to rotate · Scroll to zoom</div>
+</section>
+<section class="panel controls"><span id="phase" class="pill">IDLE</span><h2 id="label">Ready</h2>
+<p id="message">Connect the receiver and transmitter, then start.</p><p id="source">Checking source…</p><p>Confidence: <strong id="confidence">—</strong></p>
+<div class="buttons"><button id="start" class="primary">Start inference</button><button id="stop" class="danger" disabled>Stop inference</button></div></section>
+<section class="panel protocol"><h2>Class probabilities</h2><div id="probabilities"></div>
+<h2 id="baselineTitle">Recorded baseline RMS</h2><div id="channels">Waiting for connection…</div>
+<h2>Live RMS relative to baseline</h2><div id="liveChannels">Waiting for signal…</div>
+<p class="warning">Confidence is not accuracy. Without known gesture labels, this live display cannot produce an accuracy score. No EMG samples or predictions are saved.</p></section>
+</main><script>
+window.addEventListener('error', event => {
+  const message = document.querySelector('#message');
+  if (message) message.textContent = `Browser error: ${event.message}`;
+});
+</script><script type="module" src="vision_live.js?v=2" onerror="document.querySelector('#message').textContent='The 3D module did not load.'"></script></body></html>

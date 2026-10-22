@@ -1,0 +1,14 @@
+{
+  "session_id": "five_core_reapply_P3_wrist_down_calibration_20261010",
+  "subject_id": "S01",
+  "electrode_placement_id": "P3_next_application",
+  "electrode_reapplied": true,
+  "arm_posture": "reference",
+  "forearm_orientation": "neutral",
+  "dynamic_arm_motion": false,
+  "gesture_set": "wrist_down_focus_2class",
+  "collection_group_id": "five_core_reapplication_2026",
+  "collection_purpose": "training",
+  "recording_date": "2026-10-10",
+  "notes": "Same P3 electrode application. Targeted wrist_down versus rest calibration recorded only after the frozen P3 evaluation was completed."
+}

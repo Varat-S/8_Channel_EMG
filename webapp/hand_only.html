@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMG Hand</title>
+  <link rel="stylesheet" href="hand_only.css?v=1">
+</head>
+<body>
+  <main id="stage" aria-label="Animated 3D hand">
+    <div class="topbar">
+      <span class="brand">EMG HAND</span>
+      <div class="actions">
+        <button id="start">Connect</button>
+        <button id="stop" disabled>Disconnect</button>
+      </div>
+    </div>
+    <div class="readout" aria-live="polite">
+      <strong id="gesture">REST</strong>
+      <span id="status">Ready to connect</span>
+    </div>
+  </main>
+  <script>
+    window.addEventListener('error', event => {
+      document.querySelector('#status').textContent = `Browser error: ${event.message}`;
+    });
+  </script>
+  <script defer src="hand_only.js?v=3" onerror="document.querySelector('#status').textContent='Hand controls failed to load'"></script>
+</body>
+</html>

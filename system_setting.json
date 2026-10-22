@@ -1,0 +1,23 @@
+{
+  "com_port": "COM8",
+  "baud_rate": 921600,
+  "plot_channels": 8,
+  "start_ch": 0,
+  "min_y_1": -2e-05,
+  "max_y_1": 2e-05,
+  "board_num": 1,
+  "board_chan_num": [
+    8,
+    8,
+    8,
+    8
+  ],
+  "col_count": 4,
+  "sample_rate": 250,
+  "time_length": 10,
+  "display_interval": 0.2,
+  "filter_interval": 0.4,
+  "exit_flag": false,
+  "auto_range_enabled": false,
+  "imp_interval": 1.0
+}

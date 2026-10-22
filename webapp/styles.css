@@ -1,0 +1,54 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ink: #eef3f0;
+  --muted: #91a19a;
+  --line: rgba(255, 255, 255, .10);
+  --accent: #73f2b7;
+  --accent-2: #ffd166;
+  background: #09100e;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; color: var(--ink); background: radial-gradient(circle at 20% 15%, #16352c 0, #0b1512 38%, #070b0a 100%); }
+main { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1fr) 390px; }
+#stage { min-height: 100vh; position: relative; overflow: hidden; cursor: grab; }
+#stage:active { cursor: grabbing; }
+#stage canvas { display: block; width: 100%; height: 100%; }
+.brand, .hint { position: absolute; z-index: 2; letter-spacing: .12em; font-size: 11px; color: var(--muted); }
+.brand { top: 24px; left: 28px; }
+.hint { bottom: 22px; left: 28px; }
+.pulse { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-right: 8px; box-shadow: 0 0 16px var(--accent); }
+aside { padding: 52px 38px 34px; border-left: 1px solid var(--line); background: rgba(8, 14, 12, .82); backdrop-filter: blur(20px); }
+.eyebrow, .section-label { color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .18em; }
+h1 { margin: 9px 0 12px; font-size: clamp(34px, 4vw, 54px); line-height: .95; letter-spacing: -.04em; }
+#status { color: var(--muted); min-height: 66px; line-height: 1.5; }
+.readout { display: flex; align-items: baseline; justify-content: space-between; padding: 16px 0; border-top: 1px solid var(--line); }
+.readout span { color: var(--muted); font-size: 10px; letter-spacing: .14em; }
+.readout strong { font-size: 17px; letter-spacing: .04em; }
+.confidence { height: 5px; border-radius: 8px; background: #24302c; overflow: hidden; margin-top: 8px; }
+#confidence-bar { height: 100%; width: 0; background: linear-gradient(90deg, var(--accent-2), var(--accent)); transition: width 120ms linear; }
+.confidence-label { display: flex; justify-content: space-between; margin-top: 7px; color: var(--muted); font-size: 11px; }
+.calibration-block { margin-top: 28px; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.calibration-progress { height: 8px; margin-top: 14px; border-radius: 8px; overflow: hidden; background: #24302c; }
+#calibration-bar { width: 0; height: 100%; background: linear-gradient(90deg, var(--accent-2), var(--accent)); transition: width .2s ease; }
+.hidden { display: none; }
+.sequence-block { margin-top: 42px; }
+.sequence { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+.step { padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 11px; text-transform: uppercase; transition: .2s ease; }
+.step.done { color: #08130f; background: var(--accent); border-color: var(--accent); }
+.step.next { color: var(--ink); border-color: var(--accent-2); box-shadow: inset 0 0 0 1px var(--accent-2); }
+.preview-block { margin-top: 28px; }
+.pose-preview { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+button.pose-chip { padding: 7px 9px; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 3px; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+button.pose-chip:hover, button.pose-chip.active { color: #07100d; background: var(--accent); border-color: var(--accent); }
+.small { color: var(--muted); font-size: 11px; line-height: 1.5; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 34px; }
+button { border: 0; border-radius: 4px; padding: 13px 12px; cursor: pointer; font-weight: 700; background: var(--accent); color: #07100d; }
+button:disabled { opacity: .5; cursor: wait; }
+button.secondary { color: var(--ink); background: transparent; border: 1px solid var(--line); }
+.safety { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); }
+@media (max-width: 800px) {
+  main { grid-template-columns: 1fr; grid-template-rows: 58vh auto; }
+  #stage { min-height: 58vh; }
+  aside { border-left: 0; border-top: 1px solid var(--line); padding: 30px 24px; }
+}
